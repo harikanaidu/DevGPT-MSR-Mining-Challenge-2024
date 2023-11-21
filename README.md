@@ -22,4 +22,14 @@ Once both prompts and category labels are transformed into embeddings, the next 
 **Classification Using SVM with Linear Kernel: **
 Now that we have the categories for each prompt, we then split the prompts and categories into train and test splits and apply Linear-kernel SVM classifier to test the predictions made by GPT2. Accuracy obtained on the test data sample is 74.65%
 
+**Methodology for Q3:
+The initial step involves converting text prompts into numerical representations. GPT-2 possesses the capability to comprehend the contextual and semantic aspects of words within the prompts, thereby transforming them into high-dimensional vectors known as word embeddings.
+
+After obtaining numerical representations, such as word embeddings, from the GPT-2-transformed text prompts, the next step involves training a Random Forest machine learning model using these extracted features. The Random Forest model utilizes the learned numerical representations to make predictions based on the patterns and relationships present in the training data.
+
+Employed the "SelectFromModel" technique for feature selection. Utilized this method to identify and retain the most significant features for my analysis.
+
+Proceeded with further refinement by employing Random Search Cross-Validation (Random Search CV). This involves systematically exploring different combinations of hyperparameters for your model to find the most effective configuration.
+
+
 
