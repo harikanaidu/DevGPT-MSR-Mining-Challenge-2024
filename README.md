@@ -22,6 +22,20 @@ Once both prompts and category labels are transformed into embeddings, the next 
 **Classification Using SVM with Linear Kernel: **
 Now that we have the categories for each prompt, we then split the prompts and categories into train and test splits and apply Linear-kernel SVM classifier to test the predictions made by GPT2. Accuracy obtained on the test data sample is 74.65%
 
+
+**Methodology for Q2: 
+
+**Text Preprocessing: Custom text preprocessing is applied to the data, involving steps like lowercasing, removing punctuation, and stemming. This standardizes the text for analysis.
+
+**Vectorization (TF-IDF): The initial queries are transformed into numerical vectors using the TF-IDF (Term Frequency-Inverse Document Frequency) vectorization method. This step is important for preparing the text for similarity analysis.
+
+**Cosine Similarity Analysis: You use cosine similarity to measure the similarity between the initial queries and the follow-up interactions. This helps in classifying follow-ups as either related or new queries based on a set similarity threshold.
+
+**Sentiment and Subjectivity Analysis: Utilizing TextBlob, you analyze the sentiment and subjectivity of the initial queries, providing insights into the emotional tone and objective vs. subjective nature of the queries.
+
+**Statistical Aggregation: The data is then aggregated to calculate average sentiment, subjectivity, and the average number of related and new queries per conversation.
+
+
 **Methodology for Q3:
 The initial step involves converting text prompts into numerical representations. GPT-2 possesses the capability to comprehend the contextual and semantic aspects of words within the prompts, thereby transforming them into high-dimensional vectors known as word embeddings.
 
